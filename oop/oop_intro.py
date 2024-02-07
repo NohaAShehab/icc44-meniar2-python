@@ -224,6 +224,48 @@ print(isinstance(name, object))
 """class method """
 
 
+# class Employee:  # Employee implicitly inherits from object class
+#     commission = .1  # class variable  represent class property
+#     count = 0
+#
+#     # shared property between all class instances
+#     def __init__(self, name, salary):
+#         self.name = name  # properties
+#         self.salary = salary
+#         Employee.count += 1
+#
+#     ### save objects to json   --> instance
+#
+#     # instance method
+#     def printEmpInfo(self):
+#         print(f"name={self.name}, salary={self.salary}")
+#
+#     # # this function represent class itself not the instance
+#     @classmethod
+#     def get_no_of_employees(cls):
+#         return cls.count
+#
+#
+#     ## class method is considered to be object factory
+#     @classmethod
+#     def create_default_object(cls):
+#         return  cls("", 0)
+#
+#     @classmethod
+#     def get_saved_objects(cls):
+#         pass
+#
+#
+#
+# emp = Employee("ahmed", 324234234)
+#
+#
+# emp2 = Employee.create_default_object()
+
+
+""" check this """
+
+
 class Employee:  # Employee implicitly inherits from object class
     commission = .1  # class variable  represent class property
     count = 0
@@ -237,23 +279,17 @@ class Employee:  # Employee implicitly inherits from object class
     ### save objects to json   --> instance
 
     # instance method
-    def printEmpInfo(self):
-        print(f"name={self.name}, salary={self.salary}")
+    def printEmpInfo(iti):
+        print(iti)
 
     # # this function represent class itself not the instance
     @classmethod
-    def get_no_of_employees(cls):
-        return cls.count
+    def get_no_of_employees(myiti):
+        print(myiti)
 
 
     ## class method is considered to be object factory
-    @classmethod
-    def create_default_object(cls):
-        return  cls("", 0)
 
-    @classmethod
-    def get_saved_objects(cls):
-        pass
 
 
 
@@ -261,3 +297,13 @@ emp = Employee("ahmed", 324234234)
 
 
 emp2 = Employee.create_default_object()
+
+
+
+
+
+
+
+
+
+
