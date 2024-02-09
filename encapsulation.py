@@ -117,19 +117,91 @@
 #
 
 
+# class Employee:
+#
+#     def __init__(self, name, email, salary):
+#         self.name = name
+#         self._email = email
+#         self.__salary = salary  ##private
+#
+#     def printEmpInfo(self):
+#         print(f"name={self.name}, email={self._email}, salary={self.__salary}")
+#
+#     @property  # this function get value from property
+#     def salary(self):
+#         return self.__salary
+#
+#     @salary.setter
+#     def salary(self, salary):
+#         if (isinstance(salary, int) or isinstance(salary, float)) and salary > 0:
+#             self.__salary = salary
+#         else:
+#             raise ValueError('Salary must be positive number ')
+#
+#     def set_salary(self, salary):
+#         if (isinstance(salary, int) or isinstance(salary, float)) and salary > 0:
+#             self.__salary = salary
+#         else:
+#             raise ValueError('Salary must be positive number ')
+#
+#
+# emp1 = Employee("Ahmed", "Ahmed@gmail.com", 48978)
+# emp1.set_salary(100000)
+#
+# print(emp1.salary)
+#
+# emp1.salary = 489389357
+
+""" check this """
+# class Employee:
+#
+#     def __init__(self, name, email, salary):
+#         self.name = name
+#         self._email = email
+#         # self.__salary = salary  ##private
+#         if (isinstance(salary, int) or isinstance(salary, float)) and salary > 0:
+#             self.__salary = salary
+#         else:
+#             raise ValueError('Salary must be positive number ')
+#
+#     def printEmpInfo(self):
+#         print(f"name={self.name}, email={self._email}, salary={self.__salary}")
+#
+#     @property  # this function get value from property
+#     def salary(self):
+#         return self.__salary
+#
+#     @salary.setter
+#     def salary(self, salary):
+#         if (isinstance(salary, int) or isinstance(salary, float)) and salary > 0:
+#             self.__salary = salary
+#         else:
+#             raise ValueError('Salary must be positive number ')
+#
+#
+#
+#
+# emp1 = Employee("Ahmed", "Ahmed@gmail.com", 48978)
+# print(emp1.salary)
+# emp1.salary = 763928
+# emp2 = Employee("noha", "noha@gmail.com", "mysal")
+#
+
+""" better solution """
 class Employee:
 
     def __init__(self, name, email, salary):
         self.name = name
         self._email = email
-        self.__salary = salary  ##private
+        print(self)
+        self.salary = salary  # call property setter
 
     def printEmpInfo(self):
         print(f"name={self.name}, email={self._email}, salary={self.__salary}")
 
     @property  # this function get value from property
     def salary(self):
-        return self.__salary
+        return self.__salary*.8
 
     @salary.setter
     def salary(self, salary):
@@ -138,16 +210,22 @@ class Employee:
         else:
             raise ValueError('Salary must be positive number ')
 
-    def set_salary(self, salary):
-        if (isinstance(salary, int) or isinstance(salary, float)) and salary > 0:
-            self.__salary = salary
-        else:
-            raise ValueError('Salary must be positive number ')
+
 
 
 emp1 = Employee("Ahmed", "Ahmed@gmail.com", 48978)
-emp1.set_salary(100000)
-
+# print("object created - > ",emp1)
 print(emp1.salary)
+emp1.salary = 763928  # call property setter
+# emp2 = Employee("noha", "noha@gmail.com", "mysal")
+#
 
-emp1.salary = 489389357
+
+
+
+
+
+
+
+
+
