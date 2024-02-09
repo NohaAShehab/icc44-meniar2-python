@@ -71,6 +71,7 @@ emp = Employee("John", 100000)
 print(emp)
 emp.talk()
 emp.printEmpInfo()
+## object  --> contain data --> instance variables /// access instance methods
 
 
 ### function ---> calculate netsalary
